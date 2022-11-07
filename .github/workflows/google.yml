@@ -13,20 +13,6 @@ jobs:
       run: sudo apt-get install screen git && curl https://rclone.org/install.sh | sudo bash
       
     - name: Rclone config
-      run: |
-        rclone config
-        n
-        drive
-        16
-        626138316248-bttiisuo742slu37ometqmdjtga6m2kv.apps.googleusercontent.com
-        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
-        1
-         
-         
-        n
-        y
-        y
-        6
-        y
-        q
-        
+      uses: AnimMouse/setup-rclone@v1
+      with:
+        rclone_config: ${{ secrets.RCLONE_CONFIG }}      
